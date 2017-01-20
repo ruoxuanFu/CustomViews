@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.quaie.wms.myapplication.EditTextCanClearActivity">
+
+    <com.quaie.wms.myapplication.View.EditTextCanClear
+        android:id="@+id/clear_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#d3d3d3"
+        app:setClearBtnImg="@drawable/clear_edittext_round"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginRight="24dp"
+        android:background="#000" />
+
+</LinearLayout>
