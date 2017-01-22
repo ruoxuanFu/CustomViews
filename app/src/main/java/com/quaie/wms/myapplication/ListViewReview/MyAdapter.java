@@ -75,7 +75,7 @@ public class MyAdapter extends BaseAdapter {
 
         ViewHolder holder = null;
         if (convertView == null) {
-            convertView = LayoutInflater.from(mContext).inflate(R.layout.listview_item, parent, false);
+            convertView = mInflater.inflate(R.layout.listview_item, parent, false);
             holder = new ViewHolder();
             holder.btn = (Button) convertView.findViewById(R.id.listview_button);
             holder.text = (TextView) convertView.findViewById(R.id.listview_text);
