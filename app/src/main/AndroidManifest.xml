@@ -11,7 +11,7 @@
         <activity android:name=".EditTextCanClearActivity">
         </activity>
         <activity
-            android:name=".Main2Activity"
+            android:name=".ClockClock"
             android:label="@string/title_activity_main2"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
