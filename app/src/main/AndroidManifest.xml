@@ -15,7 +15,8 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".ListViewReview.Main3Activity"></activity>
         <activity android:name=".Main4Activity"></activity>
-        <activity android:name=".Main5Activity">
+        <activity android:name=".Main5Activity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
