@@ -25,4 +25,12 @@
         android:completionHint="请输入搜索内容"
         android:completionThreshold="1" />
 
+    <ExpandableListView
+        android:id="@+id/exlist_lol"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:childDivider="#E02D2F">
+
+    </ExpandableListView>
+
 </LinearLayout>
