@@ -53,11 +53,13 @@ public class MyBaseExpandableListAdapter extends BaseExpandableListAdapter {
         this.mContext = mContext;
     }
 
+    //指定组的数量
     @Override
     public int getGroupCount() {
         return groupData.size();
     }
 
+    //指定下拉菜单里数据的数量
     @Override
     public int getChildrenCount(int groupPosition) {
         return childData.get(groupPosition).size();
@@ -115,6 +117,7 @@ public class MyBaseExpandableListAdapter extends BaseExpandableListAdapter {
         return convertView;
     }
 
+    //取得用于显示给定分组的数据的视图. 这个方法仅返回数据的视图对象
     @Override
     public View getChildView(int groupPosition, int childPosition, boolean isLastChild, View convertView, ViewGroup parent) {
 
@@ -135,6 +138,7 @@ public class MyBaseExpandableListAdapter extends BaseExpandableListAdapter {
         return convertView;
     }
 
+    //此处要返回true，否则不会触发item点击事件
     @Override
     public boolean isChildSelectable(int groupPosition, int childPosition) {
         return true;

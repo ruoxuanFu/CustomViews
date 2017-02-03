@@ -12,10 +12,10 @@
         <activity
             android:name=".ClockClock"
             android:label="@string/title_activity_main2"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".ListViewReview.Main3Activity">
-        </activity>
-        <activity android:name=".Main4Activity">
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ListViewReview.Main3Activity"></activity>
+        <activity android:name=".Main4Activity"></activity>
+        <activity android:name=".Main5Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
