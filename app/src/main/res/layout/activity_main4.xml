@@ -25,6 +25,7 @@
         android:completionHint="请输入搜索内容"
         android:completionThreshold="1" />
 
+    <!--可折叠listview-ExpandableListView 的 创建-->
     <ExpandableListView
         android:id="@+id/exlist_lol"
         android:layout_width="match_parent"
