@@ -17,12 +17,12 @@
         <activity android:name=".Main4Activity" />
         <activity
             android:name=".Main5Activity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-
-        </activity>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
         <activity
             android:name=".Main6Activity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
+        <activity android:name=".Main7Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
