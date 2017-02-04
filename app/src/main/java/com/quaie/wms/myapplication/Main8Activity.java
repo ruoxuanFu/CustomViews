@@ -11,6 +11,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import com.quaie.wms.myapplication.Bean.PersonInfo;
 import com.quaie.wms.myapplication.View.EditTextCanClear;
 
 //bundle传递信息
@@ -106,6 +107,14 @@ public class Main8Activity extends AppCompatActivity implements View.OnClickList
                     bundle.putString("userid", mUser_id);
                     bundle.putString("userpsd", mUser_psd);
                     bundle.putString("usersex", mUser_sex);
+
+                    PersonInfo personInfo = new PersonInfo();
+                    personInfo.setAge(20);
+                    personInfo.setBirthday("7/15");
+                    personInfo.setAddress("南海市南山区南山南");
+                    personInfo.setTelphone("110");
+                    bundle.putSerializable("personinfo", personInfo);
+
                     intent.putExtras(bundle);
                     startActivity(intent);
                     finish();

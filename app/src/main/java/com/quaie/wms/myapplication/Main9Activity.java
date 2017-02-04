@@ -8,6 +8,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.widget.TextView;
 
+import com.quaie.wms.myapplication.Bean.PersonInfo;
+
 //bundle传递信息的目标activity
 public class Main9Activity extends AppCompatActivity {
 
@@ -16,6 +18,8 @@ public class Main9Activity extends AppCompatActivity {
     private String mUser_id;
     private String mUser_psd;
     private String mUser_sex;
+
+    private PersonInfo personInfo;
 
     private Handler handler = new Handler() {
         @Override
@@ -26,7 +30,13 @@ public class Main9Activity extends AppCompatActivity {
                     main9_textinfo.setText("Error");
                     break;
                 case 2:
-                    main9_textinfo.setText("用户名：" + mUser_id + "\n" + "密码：" + mUser_psd + "\n" + "性别：" + mUser_sex + "\n");
+                    main9_textinfo.setText("用户名：" + mUser_id + "\n" +
+                            "密码：" + mUser_psd + "\n" +
+                            "性别：" + mUser_sex + "\n" +
+                            "年龄：" + personInfo.getAge() + "\n" +
+                            "生日：" + personInfo.getBirthday() + "\n" +
+                            "地址：" + personInfo.getAddress() + "\n" +
+                            "电话：" + personInfo.getTelphone());
                     break;
             }
         }
@@ -41,13 +51,13 @@ public class Main9Activity extends AppCompatActivity {
     }
 
     private void initData() {
-        Intent getUserData = getIntent();
-        Bundle getbd = getUserData.getExtras();
+        Bundle getbd = getIntent().getExtras();
         mUser_id = getbd.getString("userid");
         mUser_psd = getbd.getString("userpsd");
         mUser_sex = getbd.getString("usersex");
+        personInfo = (PersonInfo) getIntent().getSerializableExtra("personinfo");
 
-        if (TextUtils.isEmpty(mUser_id) || TextUtils.isEmpty(mUser_psd) || TextUtils.isEmpty(mUser_sex)) {
+        if (TextUtils.isEmpty(mUser_id) || TextUtils.isEmpty(mUser_psd) || TextUtils.isEmpty(mUser_sex) || personInfo == null) {
             handler.sendEmptyMessage(1);
         } else {
             handler.sendEmptyMessage(2);
