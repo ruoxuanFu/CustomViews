@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main8"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.quaie.wms.myapplication.Main8Activity">
+
+    <com.quaie.wms.myapplication.View.EditTextCanClear
+        android:id="@+id/main8_id"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#fff"
+        android:paddingLeft="5dp"
+        app:setClearBtnImg="@drawable/clear_edittext_round" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#333333">
+
+    </View>
+
+    <com.quaie.wms.myapplication.View.EditTextCanClear
+        android:id="@+id/main8_psd"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#fff"
+        android:paddingLeft="5dp"
+        app:setClearBtnImg="@drawable/clear_edittext_round" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#333333"></View>
+
+    <RadioGroup
+        android:id="@+id/main8_rg"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/sex_man"
+            android:layout_width="70dp"
+            android:layout_height="25dp"
+            android:text="男"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/sex_woman"
+            android:layout_width="70dp"
+            android:layout_height="25dp"
+            android:text="女"
+            android:textSize="18sp" />
+
+    </RadioGroup>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#333333"></View>
+
+    <Button
+        android:id="@+id/main8_btn"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:text="ok"
+        android:textSize="18sp" />
+
+</LinearLayout>
