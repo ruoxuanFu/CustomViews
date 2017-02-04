@@ -2,6 +2,7 @@ package com.quaie.wms.myapplication;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcel;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextUtils;
@@ -12,6 +13,7 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.quaie.wms.myapplication.Bean.PersonInfo;
+import com.quaie.wms.myapplication.Bean.PersonInfoMore;
 import com.quaie.wms.myapplication.View.EditTextCanClear;
 
 //bundle传递信息
@@ -108,12 +110,20 @@ public class Main8Activity extends AppCompatActivity implements View.OnClickList
                     bundle.putString("userpsd", mUser_psd);
                     bundle.putString("usersex", mUser_sex);
 
+                    //bundle传递Serializable对象
                     PersonInfo personInfo = new PersonInfo();
                     personInfo.setAge(20);
                     personInfo.setBirthday("7/15");
                     personInfo.setAddress("南海市南山区南山南");
                     personInfo.setTelphone("110");
                     bundle.putSerializable("personinfo", personInfo);
+
+                    //bundle传递Parcelable对象
+                    PersonInfoMore personInfoMore = new PersonInfoMore();
+                    personInfoMore.setLikeSome("吃饭睡觉打豆豆");
+                    personInfoMore.setConstellation("人见人爱花见花开处女座");
+                    personInfoMore.setLolAddress("弗雷尔卓德");
+                    bundle.putParcelable("personinfomore", personInfoMore);
 
                     intent.putExtras(bundle);
                     startActivity(intent);
