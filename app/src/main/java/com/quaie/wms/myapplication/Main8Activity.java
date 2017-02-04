@@ -121,7 +121,7 @@ public class Main8Activity extends AppCompatActivity implements View.OnClickList
                     //bundle传递Parcelable对象
                     PersonInfoMore personInfoMore = new PersonInfoMore();
                     personInfoMore.setLikeSome("吃饭睡觉打豆豆");
-                    personInfoMore.setConstellation("人见人爱花见花开处女座");
+                    personInfoMore.setConstellation("人见人爱花见花开处女座正是在下");
                     personInfoMore.setLolAddress("弗雷尔卓德");
                     bundle.putParcelable("personinfomore", personInfoMore);
 

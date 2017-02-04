@@ -36,16 +36,27 @@ public class PersonInfoMore implements Parcelable {
     private String constellation;
     private String lolAddress;
 
+    public PersonInfoMore() {
+    }
+
+    protected PersonInfoMore(Parcel in) {
+        likeSome = in.readString();
+        constellation = in.readString();
+        lolAddress = in.readString();
+    }
+
     public static final Creator<PersonInfoMore> CREATOR = new Creator<PersonInfoMore>() {
         @Override
         public PersonInfoMore createFromParcel(Parcel in) {
 
-            PersonInfoMore pPersonInfoMore = new PersonInfoMore();
+/*            PersonInfoMore pPersonInfoMore = new PersonInfoMore();
             pPersonInfoMore.likeSome = in.readString();
             pPersonInfoMore.constellation = in.readString();
             pPersonInfoMore.lolAddress = in.readString();
 
-            return pPersonInfoMore;
+            return pPersonInfoMore;*/
+            return new PersonInfoMore(in);
+
         }
 
         @Override
